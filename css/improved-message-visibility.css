@@ -1,0 +1,48 @@
+#chat-log .enhance-message-visibility {
+  background-color: rgb(204, 123, 40);
+  border-color: rgb(204, 123, 40);
+  background-image:
+    linear-gradient(to top,
+      rgba(255,255,255,0.5),
+      rgba(255,255,255,0.8) 100%),
+    repeating-linear-gradient(
+      -60deg,
+      transparent,
+      transparent 20px,
+      rgba(255,255,255,0.1) 20px,
+      rgba(255,255,255,0.2) 40px);
+  box-shadow: 0 0 1em 1em rgba(255, 255, 255, 0.25) inset;
+}
+
+/* Add badge to Private Rolls, Blind Rolls, and Whispers */
+#chat-log .chat-message.whisper .message-sender:before {
+  background-color: rgba(79, 121, 215, 0.8);
+  border-radius: 2px;
+  font-size: 0.6em;
+  font-weight: bold;
+  text-shadow: 0px 0px 0px;
+  color: rgba(255,255,255, 1);
+  letter-spacing: 0.15em;
+  margin-right: 0.5em;
+  padding: 0.2em 0.5em;
+  text-transform: uppercase;
+  vertical-align: top;
+  content: "Private";
+}
+
+#chat-log .chat-message.enhance-message-visibility .message-sender:before {
+  background-color: rgba(230, 65, 0, 0.6);
+  content: "Whisper";
+}
+
+#chat-log .chat-message.blind .message-sender:before {
+  background-color: rgba(165, 57, 167, 0.7);
+  content: "Blind";
+}
+
+/* Truncate sender name */
+#chat-log .chat-message .message-sender {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 5;
+}
