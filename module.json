@@ -4,16 +4,16 @@
   "description": "A module to provide a better chat experience. Whispers are vibrant, and different messages are indicated.",
   "version": "1.0.0",
   "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "11",
+  "compatability": {
+    "minimum": "9",
+    "verified": "11"
+  },
   "authors": [
     {
       "name": "bakbakbakbakbak",
       "url": "https://github.com/bakbakbakbakbak"
     }
   ],
-  "dependencies": [],
   "conflicts": [],
   "esmodules": [
     "/src/improved-message-visibility.js"

@@ -18,13 +18,16 @@ export function renderChatMessage(chatMessage, element, speaker) {
     }
 
     // Color the element using a class that we define in CSS file
-    $(element)
-      .not(":has(div.item-card")
-      .not(":has(div.dice-roll")
+    if (
+      !$(element).find("div.item-card").length
+      || !$(element).find("div.dice-roll").length
+    ) { 
+      $(element)
       .css({
         "background-color": messageColor,
         "border-color": messageColor
       })
-      .addClass("enhance-message-visibility");
+      .addClass("enhance-message-visibility");  
+    }
   }
 };
